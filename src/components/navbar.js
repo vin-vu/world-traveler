@@ -37,17 +37,17 @@ function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/services' className='nav-links' onClick={closeMobileMenu} src='/images/img-2.jpg'>
                 Services
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/products' className='nav-links' onClick={closeMobileMenu} src='/images/img-1.jpg'>
                 Products
               </Link>
             </li>
             <li className='nav-item'>
-              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
+              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu} src='/images/img-8.jpg'>
                 Sign-up
               </Link>
             </li>
