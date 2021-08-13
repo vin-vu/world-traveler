@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { Button } from './Button';
@@ -7,6 +7,8 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  // when click is false, navbar retracts and default menu button appears
+  // clicking menu button needs its own func to retract
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -20,11 +22,16 @@ function Navbar() {
 
   window.addEventListener('resize', showButton);
 
+  useEffect(() => {
+    showButton();
+  }, [])
+
   return (
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
-          <Link to='/' className='navbar-logo'>
+          {/* menu icon/menu active defaults to falsy from click state */}
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Travel <i className='fab fa-typo3'/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
