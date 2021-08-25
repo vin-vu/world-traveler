@@ -2,11 +2,12 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button.js';
 import './HeroSection.css';
+import video from '../static/videos/video-1.mp4';
 
 function HeroSection() {
   return (
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src={video} autoPlay loop muted />
       <h1>ADVENTURE AWAITS</h1>
       <p>What are you waiting for?
         <div className='hero-btns'>

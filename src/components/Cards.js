@@ -10,7 +10,6 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem 
-            // src='../static/images/img-9.jpg'
             src={require('../static/images/img-9.jpg').default}
             text='Explore the hidden waterfall deep insidet the Amazon jungle'
             label='Adventure'
